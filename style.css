@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+height: 100vh;
+font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-repeat: no-repeat;
+    background-image: url('./IMG/Backgraund\ img.jpg') ;
+    height: 100vh;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+   
+
+}
+
+.logo__pagina{
+    background-image: url('./IMG/porticos-logo.png');
+    width: 50%;
+    height: 30vh;
+}
+
+nav{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.div__botoes{
+    display: flex;
+    gap: 2rem;
+}
+
+.botao__nav {
+    position: relative;
+    color: black;
+    text-decoration: none;
+   
+}
+
+.botao__nav::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.botao__nav:hover::before {
+    width: 100%; /* Ajuste conforme necessário */
+}
+
+
+.div__titulo{
+    margin-top: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao__saibaMais{
+    background: rgb(36,50,64);
+    border-radius: 2rem;
+    padding: 1em 2em;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.botao__saibaMais:hover{
+    border: 2px solid rgb(36,50,64);
+    background-color: white;
+    color: rgb(36,50,64) ;
+}
+
+
+.cards{
+    padding: 6rem;
+}
+
+.div__contatos{
+    margin-bottom: 10rem;
+}
+
+.linha{
+    width: 15%;
+    margin-left: 40rem;
+}
+
+
+.contatos{
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.p{
+    margin-right: 2rem;
+}
+
+
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: -50px; /* Ajuste o valor conforme necessário para afastar os itens para o lado esquerdo */
+}
+
+.li {
+    display: flex;
+    align-items: center;
+}
+
+.bi {
+    font-size: 1.5em;
+}
+
+.p {
+    margin: 0;
+}
+
+
+.div__botao__contatos{
+    margin-top: 3rem;
+}
+
+
+.botao__contato{
+    margin-top: 5rem;
+    background: rgb(36,50,64);
+    border-radius: 2rem;
+    padding: 1em 2em;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.botao__contato:hover{
+    border: 2px solid rgb(36,50,64);
+    background-color: white;
+    color: rgb(36,50,64) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

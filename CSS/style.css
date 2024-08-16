@@ -11,7 +11,7 @@ font-family: 'Roboto', sans-serif;
 
 header{
     background-repeat: no-repeat;
-    background-image: url('./IMG/Backgraund\ img.jpg') ;
+    background-image: url('../IMG/Backgraund\ img.jpg') ;
     height: 100vh;
     width: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -57,7 +57,7 @@ nav{
 }
 
 .botao__nav:hover::before {
-    width: 100%; /* Ajuste conforme necessário */
+    width: 100%; 
 }
 
 
@@ -158,11 +158,29 @@ ul {
 }
 
 
+.div__botoes {
+    display: flex;
+    gap: 15px;
+}
 
+.menu-toggle {
+    display: none;
+}
 
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
 
-
-
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.4s;
+}
 
 
 

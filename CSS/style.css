@@ -1,31 +1,28 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-
-body{
-height: 100vh;
-font-family: 'Roboto', sans-serif;
+body {
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
-header{
+header {
     background-repeat: no-repeat;
-    background-image: url('../IMG/Backgraund\ img.jpg') ;
+    background-image: url('../IMG/Backgraund\ img.jpg');
     height: 100vh;
     width: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-   
-
 }
 
-.logo__pagina{
+.logo__pagina {
     background-image: url('./IMG/porticos-logo.png');
     width: 50%;
     height: 30vh;
 }
 
-nav{
+nav {
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -33,7 +30,7 @@ nav{
     gap: 2rem;
 }
 
-.div__botoes{
+.div__botoes {
     display: flex;
     gap: 2rem;
 }
@@ -42,7 +39,6 @@ nav{
     position: relative;
     color: black;
     text-decoration: none;
-   
 }
 
 .botao__nav::before {
@@ -57,19 +53,18 @@ nav{
 }
 
 .botao__nav:hover::before {
-    width: 100%; 
+    width: 100%;
 }
 
-
-.div__titulo{
+.div__titulo {
     margin-top: 15rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.botao__saibaMais{
-    background: rgb(36,50,64);
+.botao__saibaMais {
+    background: rgb(36, 50, 64);
     border-radius: 2rem;
     padding: 1em 2em;
     color: white;
@@ -77,28 +72,26 @@ nav{
     transition: background-color 0.3s ease;
 }
 
-.botao__saibaMais:hover{
-    border: 2px solid rgb(36,50,64);
+.botao__saibaMais:hover {
+    border: 2px solid rgb(36, 50, 64);
     background-color: white;
-    color: rgb(36,50,64) ;
+    color: rgb(36, 50, 64);
 }
 
-
-.cards{
+.cards {
     padding: 6rem;
 }
 
-.div__contatos{
+.div__contatos {
     margin-bottom: 10rem;
 }
 
-.linha{
+.linha {
     width: 15%;
     margin-left: 40rem;
 }
 
-
-.contatos{
+.contatos {
     padding: 5rem;
     display: flex;
     justify-content: center;
@@ -106,19 +99,14 @@ nav{
     justify-content: space-around;
 }
 
-
-.p{
+.p {
     margin-right: 2rem;
 }
-
-
-
-
 
 ul {
     list-style-type: none;
     padding: 0;
-    margin-left: -50px; /* Ajuste o valor conforme necessário para afastar os itens para o lado esquerdo */
+    margin-left: -50px; /* Ajuste conforme necessário */
 }
 
 .li {
@@ -134,15 +122,13 @@ ul {
     margin: 0;
 }
 
-
-.div__botao__contatos{
+.div__botao__contatos {
     margin-top: 3rem;
 }
 
-
-.botao__contato{
+.botao__contato {
     margin-top: 5rem;
-    background: rgb(36,50,64);
+    background: rgb(36, 50, 64);
     border-radius: 2rem;
     padding: 1em 2em;
     color: white;
@@ -150,19 +136,13 @@ ul {
     transition: background-color 0.3s ease;
 }
 
-
-.botao__contato:hover{
-    border: 2px solid rgb(36,50,64);
+.botao__contato:hover {
+    border: 2px solid rgb(36, 50, 64);
     background-color: white;
-    color: rgb(36,50,64) ;
+    color: rgb(36, 50, 64);
 }
 
-
-.div__botoes {
-    display: flex;
-    gap: 15px;
-}
-
+/* Menu hambúrguer para telas menores */
 .menu-toggle {
     display: none;
 }
@@ -182,11 +162,79 @@ ul {
     transition: 0.4s;
 }
 
+.lista__menu {
+    display: flex;
+    gap: 2rem;
+}
 
+.menu__item {
+    text-decoration: none;
+    color: black;
+}
 
+.menu__item:hover {
+    border-bottom: 2px solid white;
+}
 
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
 
+    .lista__menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        text-align: center;
+    }
 
+    .menu-toggle:checked ~ .lista__menu {
+        display: flex;
+    }
 
+    .menu-icon {
+        display: flex;
+    }
 
+    .menu-icon span:nth-child(1) {
+        transform-origin: 1px 1px;
+    }
 
+    .menu-icon span:nth-child(2) {
+        opacity: 1;
+    }
+
+    .menu-icon span:nth-child(3) {
+        transform-origin: 1px 1px;
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .div__titulo h1 {
+        font-size: 2rem;
+    }
+
+    .menu__item {
+        font-size: 1rem;
+    }
+}
